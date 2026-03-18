@@ -62,8 +62,18 @@
 <img alt="Profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW8hhvQIWKsHP1jgM4RR2vCFe7tFoJGhwajgxX2XXIVmka3071EKQMbZClecJT-Ove-ueB33686uOBpplTD6jYQlmvG67FILAPPn9ks6Bn6eiK6hNimk1jN5JBxLyew4SglF963VzIRM1zw4cJMaZ3pmSk_r5fynwp0Hi4eJUc60g5RHoCvFNT4wds4A8mr8GuduM8yf74BJX2RJRwi5VKx4b-8pTv9sj7bbbZyzVdIQYeQsa9EjBi462mos1WKT_XS7WTEb65vt8k"/>
 </div>
 </div>
+<button id="btnMenu" class="md:hidden ml-4 rounded-lg bg-slate-100 p-2 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+    <span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
+<nav id="menuMovil" class="hidden flex-col gap-4 border-t border-slate-200 px-4 py-4 dark:border-slate-800 md:hidden mt-3 w-full">
+    <a class="text-sm font-medium text-primary dark:text-blue-400" href="#">Tablero</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-400" href="#">Reportes</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-400" href="#">Técnicos</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-400" href="#">Estadísticas</a>
+    <a class="text-sm font-bold text-red-600 hover:text-red-700" href="../index.html">Salir</a>
+</nav>
 </header>
 <main class="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 p-4 lg:p-8">
 <section class="rounded-2xl bg-gradient-to-r from-primary to-blue-900 p-8 text-white shadow-lg relative overflow-hidden">
@@ -322,5 +332,14 @@
 </div>
 </section>
 </main>
+<script>
+    const btnMenu = document.getElementById('btnMenu');
+    const menuMovil = document.getElementById('menuMovil');
 
+    // Escuchamos el clic del usuario para abrir/cerrar el menú
+    btnMenu.addEventListener('click', function() {
+        menuMovil.classList.toggle('hidden');
+        menuMovil.classList.toggle('flex');
+    });
+</script>
 </body></html>
